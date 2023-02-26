@@ -7,7 +7,7 @@ name: Build and deploy Python project to Azure Function App - kevindugan-fn
 on:
   push:
     branches:
-      - azure-fn
+      - main
   workflow_dispatch:
 
 env:
