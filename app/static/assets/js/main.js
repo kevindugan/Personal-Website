@@ -98,19 +98,34 @@
 		// Lightbox gallery.
 			$window.on('load', function() {
 
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+				$('#experience').poptrox({
+					caption: function($a) { return `${$a.next('h3').text()} at <em>${$a.next('h3').next('h5').text()}</em>`; },
+						overlayColor: '#2c2c2c',
+						overlayOpacity: 0.85,
+						popupCloserText: '',
+						popupLoaderText: '',
+						usePopupCaption: true,
+						usePopupDefaultStyling: false,
+						usePopupEasyClose: false,
+						usePopupNav: true,
+						windowMargin: (breakpoints.active('<=small') ? 0 : 50),
+						selector: '.work-item a.image'
+
 				});
+
+				// $('#two').poptrox({
+				// 	caption: function($a) { return $a.next('h3').text(); },
+				// 	overlayColor: '#2c2c2c',
+				// 	overlayOpacity: 0.85,
+				// 	popupCloserText: '',
+				// 	popupLoaderText: '',
+				// 	selector: '.work-item a.image',
+				// 	usePopupCaption: true,
+				// 	usePopupDefaultStyling: false,
+				// 	usePopupEasyClose: false,
+				// 	usePopupNav: true,
+				// 	windowMargin: (breakpoints.active('<=small') ? 0 : 50)
+				// });
 
 			});
 

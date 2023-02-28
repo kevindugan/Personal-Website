@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section id="intro">
+    <header class="major">
+        <h2>Professional Experience</h2>
+    </header>
+    <p>I have broad experience in the Software Development field. I have mainly focused on developing and optimizing applications which answer questions about physical processes and run on massively parallel compute clusters.</p>
+</section>
+
+<section id="experience_list">
+    <h2>Professional Experience</h2>
+    <div class="row">
+        {% for item in experience.values() %}
+        <article id="xom" class="col-12 container box">
+            <h3 style="margin-bottom: 0px; font-weight: bold;">
+                {{ item.Title|safe }}
+            </h3>
+            <h5>
+                {{ item.Company|safe }}<br>
+                {{ item.Dates|safe }}<br>
+                {{ item.Location|safe }}
+            </h5>
+            {% if "Description" in item %}
+            <p>{{ item.Description|safe }}</p>
+            {% endif %}
+        </article>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="row">
+        {% for item in education.values() %}
+        <article class="col-12 container box">
+            <h3 style="margin-bottom: 0px; font-weight: bold;">
+                {{ item.School|safe }}
+            </h3>
+            <h5>{{ item.Degree|safe }}<br>
+                {{ item.Dates|safe }}<br>
+                {{ item.Location|safe }}
+            </h5>
+            {% if "Description" in item %}
+            <p>{{ item.Description|safe }}</p>
+            {% endif %}
+        </article>
+        {% endfor %}
+        <!-- <article class="col-12 container box">
+            <h3 style="margin-bottom: 0px; font-weight: bold;">
+                Universit&eacute; Paris-Saclay
+            </h3>
+            <h5>Doctor of Philosophy (Ph.D.), Nuclear Physics<br>
+                Oct 2013 - Oct 2016<br>
+                Saclay, France
+            </h5>
+            <p>Built a multiphysics framework for the APOLLO3&reg; core analysis code. Along the way, I found that homogenization can have a significant impact on the final solution if special treatment is not considered for the time-dependent nature of the simulation.<br><br>
+
+            Dissertation: <a href="https://tel.archives-ouvertes.fr/tel-01531828/document">Developing a Multiphysics Solver for APOLLO3 and Applications to Cross Section Homogenization</a></p>
+        </article>
+        <article class="col-12 container box">
+            <h3 style="margin-bottom: 0px; font-weight: bold;">
+                Texas A&amp;M University
+            </h3>
+            <h5>Master of Science (M.S.), Nuclear Engineering<br>
+                Aug 2011 - Aug 2013<br>
+                College Station, TX
+            </h5>
+            <p>Explored adaptive mesh refinement for Finite Element Methods on time-dependent simulations<br><br>
+            
+            Thesis: <a href="https://oaktrust.library.tamu.edu/bitstream/handle/1969.1/151073/DUGAN-THESIS-2013.pdf">Dynamic Adaptive Multimesh Refinement for Coupled Physics Equations Applicable to Nuclear Engineering</a></p>
+        </article>
+        <article class="col-12 container box">
+            <h3 style="margin-bottom: 0px; font-weight: bold;">
+                Texas A&amp;M University
+            </h3>
+            <h5>Bachelor of Science (B.S.), Nuclear Engineering<br>
+                Aug 2007 - May 2011<br>
+                College Station, TX
+            </h5>
+        </article> -->
+    </div>
+</section>
+{% endblock %}

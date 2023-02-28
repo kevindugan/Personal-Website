@@ -1,0 +1,47 @@
+{
+    "Experience": {
+        "xom": {
+            "Title": "Scientific Software Developer",
+            "Company": "ExxonMobil",
+            "Dates": "Apr 2019 - Present",
+            "Location": "Clinton, NJ",
+            "Description": "I am part of a team which provides computational support for our research organization focused on improving energy production and carbon sequestration. Specifically I focus on our physics based simulation problems or machine learning problems. I leverage my experience with high performance computing (parallel computing with MPI, Linux, C++), algorithmic design (Python, Data Structures, Analysis), and software engineering (DevOps, Design Patterns, Architecture) to accelerate our research directions. I also have lead a self-study group focused on improving the parallel computing skills of my team and have given several seminars on the same subject."
+        },
+        "ornl": {
+            "Title": "Postdoctoral Fellow",
+            "Company": "Oak Ridge National Lab",
+            "Dates": "Jun 2017 - Jan 2019",
+            "Location": "Knoxville, TN",
+            "Description": "Developing coupling strategies for physics codes under the NEAMS (Nuclear Energy Advanced Modeling and Simulation) program. Performing a similar role in the CASL (Consortium for the Advanced Simulation of Light Water Reactors) to better predict the pellet-clad interaction under normal operation. Provided infrastructure support for the SCALE code system."
+        },
+        "cea": {
+            "Title": "Ph.D. Student Researcher",
+            "Company": "CEA - Commissariat &agrave; l'&eacute;nergie atomique et aux &eacute;nergies alternatives",
+            "Dates": "Oct 2013 - Oct 2016",
+            "Location": "Saclay, France",
+            "Description": "Project: To build a multiphysics framework within the APOLLO3 software package. The framework will use matrix-free methods and will support coupling between neutron transport and thermal hydraulics."
+        }
+    },
+    "Education": {
+        "phd": {
+            "School": "Universit&eacute; Paris-Saclay",
+            "Degree": "Doctor of Philosophy (Ph.D.), Nuclear Physics",
+            "Dates": "Oct 2013 - Oct 2016",
+            "Location": "Saclay, France",
+            "Description": "Built a multiphysics framework for the APOLLO3&reg; core analysis code. Along the way, I found that homogenization can have a significant impact on the final solution if special treatment is not considered for the time-dependent nature of the simulation.<br><br>Dissertation: <a href=\"https://tel.archives-ouvertes.fr/tel-01531828/document\">Developing a Multiphysics Solver for APOLLO3 and Applications to Cross Section Homogenization</a>"
+        },
+        "ms": {
+            "School": "Texas A&amp;M University",
+            "Degree": "Master of Science (M.S.), Nuclear Engineering",
+            "Dates": "Aug 2011 - Aug 2013",
+            "Location": "College Station, TX",
+            "Description": "Explored adaptive mesh refinement for Finite Element Methods on time-dependent simulations<br><br>Thesis: <a href=\"https://oaktrust.library.tamu.edu/bitstream/handle/1969.1/151073/DUGAN-THESIS-2013.pdf\">Dynamic Adaptive Multimesh Refinement for Coupled Physics Equations Applicable to Nuclear Engineering</a>"
+        },
+        "bs": {
+            "School": "Texas A&amp;M University",
+            "Degree": "Bachelor of Science (B.S.), Nuclear Engineering",
+            "Dates": "Aug 2007 - May 2011",
+            "Location": "College Station, TX"
+        }
+    }
+}

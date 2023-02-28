@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+    </head>
+    <body>
+        <article class="container box">
+            <h3 style="margin-bottom: 0px; font-weight: bold;">
+                {{ data.Title|safe }}
+            </h3>
+            <h5 style="margin-bottom: 0;">{{ data.Company|safe }}</h5>
+            <h5 style="margin-bottom: 0;">{{ data.Dates|safe }}</h5>
+            <h5>{{ data.Location|safe }}</h5>
+            {% if "Description" in data %}
+            <p>{{ data.Description|safe }}</p>
+            {% endif %}
+        </article>
+    </body>
+</html>
