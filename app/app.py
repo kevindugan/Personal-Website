@@ -26,4 +26,4 @@ def get_experience_data():
     return json.load(open(join(app.static_folder, "experience_data.json")))
 
 if __name__ == "__main__":
-    app.run(host="localhost")
+    app.run(host="0.0.0.0", port=5000)
