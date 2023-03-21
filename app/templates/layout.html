@@ -11,6 +11,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/lobibox/css/lobibox.min.css')}}">
 	</head>
 	<body class="is-preload">
 
@@ -50,6 +51,29 @@
 			<script src="{{url_for('static', filename='assets/js/breakpoints.min.js')}}"></script>
 			<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
 			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/lobibox/js/lobibox.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/lobibox/js/notifications.min.js')}}"></script>
+			<script>
+				Lobibox.notify.DEFAULTS = $.extend({}, Lobibox.notify.DEFAULTS, {
+					iconSource: "fontAwesome"
+				});
+				Lobibox.notify.DEFAULTS = $.extend({}, Lobibox.notify.DEFAULTS, {
+					sound: false
+				});
+			</script>
+			{% with messages = get_flashed_messages(with_categories=true) %}
+				{% for category, message in messages %}
+					<script>
+						$(window).on('load', function() {
+							window.setTimeout(function() {
+								Lobibox.notify("{{category}}", {
+									msg: "{{message}}"
+								});
+							}, 110); // is-preload class is removed after 100ms
+						});
+					</script>
+				{% endfor %}
+			{% endwith %}
 
 	</body>
 </html>

@@ -1,2 +1,2 @@
-azure_functions==1.13.2
 Flask==2.2.3
+azure-communication-email==1.0.0b1
