@@ -16,26 +16,13 @@
 <section id="experience">
 	<h2>Professional Experience</h2>
 	<div class="row">
+		{% for job, info in experience.items() %}
 		<article class="col-6 col-12-xsmall work-item">
-			<a href="{{url_for('experience_zoom')}}?job=woolpert" data-poptrox="iframe,600x400" class="image fit thumb"><img src="{{url_for('static', filename='images/woolpert-logo.png')}}" alt=""/></a>
-			<h3>Software Engineer</h3>
-			<h5>Woolpert</h5>
+			<a href="{{url_for('experience_zoom')}}?job={{job}}" data-poptrox="iframe,600x400" class="image fit thumb"><img src="{{url_for('static', filename='images/'+info.Logo)}}" alt=""/></a>
+			<h3>{{ info.Title|safe }}</h3>
+			<h5>{{ info.Company|safe }}</h5>
 		</article>
-		<article class="col-6 col-12-xsmall work-item">
-			<a href="{{url_for('experience_zoom')}}?job=xom" data-poptrox="iframe,600x400" class="image fit thumb"><img src="{{url_for('static', filename='images/xom-logo.png')}}" alt="" /></a>
-			<h3>Scientific Software Developer</h3>
-			<h5>ExxonMobil</h5>
-		</article>
-		<article class="col-6 col-12-xsmall work-item">
-			<a href="{{url_for('experience_zoom')}}?job=ornl" data-poptrox="iframe,600x400" class="image fit thumb"><img src="{{url_for('static', filename='images/ornl-logo.jpg')}}" alt="" /></a>
-			<h3>Postdoctoral Fellow</h3>
-			<h5>ORNL</h5>
-		</article>
-		<article class="col-6 col-12-xsmall work-item">
-			<a href="{{url_for('experience_zoom')}}?job=cea" data-poptrox="iframe,600x400" class="image fit thumb"><img src="{{url_for('static', filename='images/cea-logo.png')}}" alt="" /></a>
-			<h3>Ph.D. Student Researcher</h3>
-			<h5>CEA</h5>
-		</article>
+		{% endfor %}
 	</div>
 	<ul class="actions">
 		<li><a href="{{url_for('experience')}}" class="button">Full Portfolio</a></li>

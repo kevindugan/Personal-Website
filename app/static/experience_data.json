@@ -5,28 +5,32 @@
             "Company": "Woolpert",
             "Dates": "May 2023 - Present",
             "Location": "Remote",
-            "Description": "Coming soon..."
+            "Description": "Coming soon...",
+            "Logo": "woolpert-logo.png"
         },
         "xom": {
             "Title": "Scientific Software Developer",
             "Company": "ExxonMobil",
             "Dates": "Apr 2019 - March 2023",
             "Location": "Clinton, NJ",
-            "Description": "I was part of a team which provides computational support for our research organization focused on improving energy production and carbon sequestration. Specifically I focused on our physics based simulation problems or machine learning problems. I leveraged my experience with high performance computing (parallel computing with MPI, Linux, C++), algorithmic design (Python, Data Structures, Analysis), and software engineering (DevOps, Design Patterns, Architecture) to accelerate our research directions. I also lead a self-study group focused on improving the parallel computing skills of my team and gave several seminars on the same subject."
+            "Description": "I was part of a team which provides computational support for our research organization focused on improving energy production and carbon sequestration. Specifically I focused on our physics based simulation problems or machine learning problems. I leveraged my experience with high performance computing (parallel computing with MPI, Linux, C++), algorithmic design (Python, Data Structures, Analysis), and software engineering (DevOps, Design Patterns, Architecture) to accelerate our research directions. I also lead a self-study group focused on improving the parallel computing skills of my team and gave several seminars on the same subject.",
+            "Logo": "xom-logo.png"
         },
         "ornl": {
             "Title": "Postdoctoral Fellow",
             "Company": "Oak Ridge National Lab",
             "Dates": "Jun 2017 - Jan 2019",
             "Location": "Knoxville, TN",
-            "Description": "Developing coupling strategies for physics codes under the NEAMS (Nuclear Energy Advanced Modeling and Simulation) program. Performing a similar role in the CASL (Consortium for the Advanced Simulation of Light Water Reactors) to better predict the pellet-clad interaction under normal operation. Provided infrastructure support for the SCALE code system."
+            "Description": "Developing coupling strategies for physics codes under the NEAMS (Nuclear Energy Advanced Modeling and Simulation) program. Performing a similar role in the CASL (Consortium for the Advanced Simulation of Light Water Reactors) to better predict the pellet-clad interaction under normal operation. Provided infrastructure support for the SCALE code system.",
+            "Logo": "ornl-logo.jpg"
         },
         "cea": {
             "Title": "Ph.D. Student Researcher",
             "Company": "CEA - Commissariat &agrave; l'&eacute;nergie atomique et aux &eacute;nergies alternatives",
             "Dates": "Oct 2013 - Oct 2016",
             "Location": "Saclay, France",
-            "Description": "Project: To build a multiphysics framework within the APOLLO3 software package. The framework will use matrix-free methods and will support coupling between neutron transport and thermal hydraulics."
+            "Description": "Project: To build a multiphysics framework within the APOLLO3 software package. The framework will use matrix-free methods and will support coupling between neutron transport and thermal hydraulics.",
+            "Logo": "cea-logo.png"
         }
     },
     "Education": {
