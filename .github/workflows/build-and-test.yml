@@ -65,6 +65,12 @@ jobs:
           name: python-app
           path: .
 
+      - name: Append Staging tag
+        shell: bash
+        run: |
+          sed -i "s,HTML5 UP</a></li>,&<li>Staging Version ($(git rev-parse --short HEAD))</li>," app/templates/layout.html
+          grep Staging app/templates/layout.html
+
       - name: 'Deploy to Azure Functions'
         uses: Azure/functions-action@v1
         id: deploy-to-function
