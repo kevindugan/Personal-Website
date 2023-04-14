@@ -10,7 +10,12 @@ if __name__ == "__main__":
 def main():
     if request.method == "POST":
         print(request.form)
-    return render_template("index.html")
+
+    # Filter last 4 jobs
+    job_data = get_experience_data()
+    filtered_jobs = {job : job_data["Experience"][job] for job in ["woolpert", "xom", "ornl", "cea"]}
+
+    return render_template("index.html", experience=filtered_jobs)
 
 @app.route("/experience_zoom", methods=["GET"])
 def experience_zoom():

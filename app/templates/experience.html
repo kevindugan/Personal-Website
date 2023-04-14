@@ -6,10 +6,15 @@
         <h2>Professional Experience</h2>
     </header>
     <p>I have broad experience in the Software Development field. I have mainly focused on developing and optimizing applications which answer questions about physical processes and run on massively parallel compute clusters.</p>
+    
+	<ul class="actions">
+		<li><a href="{{url_for('experience')}}#experience_list" class="button">Work History</a></li>
+		<li><a href="{{url_for('experience')}}#education" class="button">Education</a></li>
+	</ul>
 </section>
 
 <section id="experience_list">
-    <h2>Professional Experience</h2>
+    <h2>Working History</h2>
     <div class="row">
         {% for item in experience.values() %}
         <article id="xom" class="col-12 container box">
