@@ -4,7 +4,7 @@ from azure.functions import HttpRequest, HttpResponse, Context, WsgiMiddleware
 
 # Configuration
 try:
-    from config_secrets import key, admin_email, azure_email, azure_mail_connection_string
+    from .config_secrets import key, admin_email, azure_email, azure_mail_connection_string
 except ImportError:
     key = admin_email = azure_email = azure_mail_connection_string = None
 app.config.update(

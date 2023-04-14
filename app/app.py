@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, json, flash, redirect, url_fo
 from os.path import join
 # from multiprocessing import Process
 
-# from contact import EmailContact
+from .contact import EmailContact
 
 app = Flask(__name__)
 
@@ -13,10 +13,11 @@ if __name__ == "__main__":
 @app.route("/", methods=["GET", "POST"])
 def main():
     if request.method == "POST":
-        # email = EmailContact(admin_email=app.config["ADMIN_EMAIL_ADDRESS"],
-        #                      azure_email=app.config["AZURE_EMAIL_ADDRESS"],
-        #                      connection=app.config["AZURE_MAIL_CONNECTION_STRING"])
+        email = EmailContact(admin_email=app.config["ADMIN_EMAIL_ADDRESS"],
+                             azure_email=app.config["AZURE_EMAIL_ADDRESS"],
+                             connection=app.config["AZURE_MAIL_CONNECTION_STRING"])
         try:
+            email.sendContactEmail(request.form)
             # heavy_process = Process(
             #     target=email.sendContactEmail,
             #     args=(request.form,),
