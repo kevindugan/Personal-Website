@@ -1,11 +1,18 @@
 {
     "Experience": {
+        "woolpert": {
+            "Title": "Software Engineer",
+            "Company": "Woolpert",
+            "Dates": "May 2023 - Present",
+            "Location": "Remote",
+            "Description": "Coming soon..."
+        },
         "xom": {
             "Title": "Scientific Software Developer",
             "Company": "ExxonMobil",
-            "Dates": "Apr 2019 - Present",
+            "Dates": "Apr 2019 - March 2023",
             "Location": "Clinton, NJ",
-            "Description": "I am part of a team which provides computational support for our research organization focused on improving energy production and carbon sequestration. Specifically I focus on our physics based simulation problems or machine learning problems. I leverage my experience with high performance computing (parallel computing with MPI, Linux, C++), algorithmic design (Python, Data Structures, Analysis), and software engineering (DevOps, Design Patterns, Architecture) to accelerate our research directions. I also have lead a self-study group focused on improving the parallel computing skills of my team and have given several seminars on the same subject."
+            "Description": "I was part of a team which provides computational support for our research organization focused on improving energy production and carbon sequestration. Specifically I focused on our physics based simulation problems or machine learning problems. I leveraged my experience with high performance computing (parallel computing with MPI, Linux, C++), algorithmic design (Python, Data Structures, Analysis), and software engineering (DevOps, Design Patterns, Architecture) to accelerate our research directions. I also lead a self-study group focused on improving the parallel computing skills of my team and gave several seminars on the same subject."
         },
         "ornl": {
             "Title": "Postdoctoral Fellow",
