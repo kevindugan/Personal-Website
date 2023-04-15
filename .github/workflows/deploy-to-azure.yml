@@ -37,6 +37,6 @@ jobs:
           app-name: 'kevindugan-fn'
           slot-name: 'Production'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C88232BD78E04339B62B14AD918AE386 }}
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true
