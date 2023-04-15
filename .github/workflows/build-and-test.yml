@@ -2,10 +2,10 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure Functions: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python project to Azure Function App - kevindugan-fn-staging
+name: Build and test kevindugan-phd.com
 
 on:
-  push:
+  pull_request:
     branches:
       - main
   workflow_dispatch:
@@ -19,10 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Python version
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
@@ -35,36 +35,46 @@ jobs:
         run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here
+      - name: Testing
+        run: |
+          pip install pytest-cov pytest-mock
+          pytest
 
       - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: python-app
           path: |
             . 
             !venv/
 
-  deploy:
-    runs-on: ubuntu-latest
+  deploy-staging:
     needs: build
+    runs-on: ubuntu-latest
     environment:
-      name: 'Production'
+      name: 'Staging'
       url: ${{ steps.deploy-to-function.outputs.webapp-url }}
 
     steps:
       - name: Download artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: python-app
           path: .
+
+      - name: Append Staging tag
+        shell: bash
+        run: |
+          sed -i "s,HTML5 UP</a></li>,&<li>Staging Version ($(git rev-parse --short ${{ github.event.pull_request.head.sha }}))</li>," app/templates/layout.html
+          grep Staging app/templates/layout.html
 
       - name: 'Deploy to Azure Functions'
         uses: Azure/functions-action@v1
         id: deploy-to-function
         with:
-          app-name: 'kevindugan-fn-staging'
-          slot-name: 'Production'
+          app-name: 'kevindugan-fn'
+          slot-name: 'staging'
           package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D7D41B9DD8C4410BE17BF36904007E2 }}
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE_STAGING }}
           scm-do-build-during-deployment: true
           enable-oryx-build: true

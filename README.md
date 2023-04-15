@@ -1,5 +1,4 @@
 
-
 ## Generating Develop Environment
 ### Building Docker development image
 ```sh
@@ -34,4 +33,13 @@ need to be installed. Then the website can be started using
 
 ```sh
 func start
+```
+
+## Configuration
+
+*Note*: you can easily get a secret key using the python secrets library.
+
+```python
+>>> import secrets
+>>> secrets.token_urlsafe() # use default length or supply your own
 ```
