@@ -5,11 +5,9 @@
 name: Build and deploy kevindugan-phd.com
 
 on:
-  workflow_run:
-      workflows: ["Build and test kevindugan-phd.com"]
-      branches: [main]
-      types:
-        - completed
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 env:
@@ -17,7 +15,6 @@ env:
 
 jobs:
   deploy:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     environment:
       name: 'Production'
