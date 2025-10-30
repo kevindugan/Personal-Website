@@ -1,5 +1,16 @@
 
 ## Generating Develop Environment
+
+Running from dev container
+
+```sh
+uv run gunicorn -b 0.0.0.0:5000 app.app:app
+```
+
+
+
+
+
 ### Building Docker development image
 ```sh
 docker image build -t web-flask .

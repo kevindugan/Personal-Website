@@ -1,4 +1,4 @@
-from azure.communication.email import EmailClient
+# from azure.communication.email import EmailClient
 from flask import flash
 
 class EmailContact:
@@ -37,14 +37,14 @@ class EmailContact:
 
     def sendContactEmail(self, form_data):
         message = self.generateMessageObject(form_data)
-        email_client = EmailClient.from_connection_string(self.connection_string)
+        # email_client = EmailClient.from_connection_string(self.connection_string)
         
-        try:
-            self.waitForSend( email_client.begin_send(message) )
-            # self.waitForSend(Poller())
-        except Exception as e:
-            print(f"Error: {e}")
-            raise e
+        # try:
+        #     self.waitForSend( email_client.begin_send(message) )
+        #     # self.waitForSend(Poller())
+        # except Exception as e:
+        #     print(f"Error: {e}")
+        #     raise e
 
     def waitForSend(self, poller):
         elapsed_time = 0
