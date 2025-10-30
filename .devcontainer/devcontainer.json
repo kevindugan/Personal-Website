@@ -1,0 +1,17 @@
+{
+    "build": {"dockerfile": "Containerfile"},
+    "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "donjayamanne.python-extension-pack",
+                "hashicorp.terraform"
+            ],
+            "settings": {
+                "editor.rulers": [100]
+            }
+        }
+    },
+    "remoteUser": "website-user",
+    "appPort": [ "8081:5000" ]
+}
