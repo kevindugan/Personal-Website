@@ -5,6 +5,7 @@ Running from dev container
 
 ```sh
 uv run gunicorn -b 0.0.0.0:5000 app.app:app
+uv pip tree -d 0 | sed 's/ v/==/' > requirements.txt
 ```
 
 

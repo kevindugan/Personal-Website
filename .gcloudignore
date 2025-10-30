@@ -1,0 +1,9 @@
+.devcontainer
+.github
+tf
+
+#!include:.gitignore
+
+pyproject.toml
+README.md
+uv.lock

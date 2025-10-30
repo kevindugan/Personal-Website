@@ -14,7 +14,7 @@ RUN apt update && \
     # Update Python
     pip install -qU pip && \
     # Install uv package manager
-    curl -LsSf https://astral.sh/uv/install.sh | sh && \
+    curl -LsSf https://astral.sh/uv/install.sh | env UV_INSTALL_DIR=/usr/bin sh && \
     # Create non-root user
     useradd --shell /bin/bash --create-home website-user && \
     echo "\nexport PATH=/home/website-user/.local/bin:\${PATH}" >> /home/website-user/.bashrc
